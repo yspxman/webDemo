@@ -3,24 +3,83 @@
 
 <style type="text/css">
 
-body{ background-color: darkseagreen}
-p{color: brown}
+#header{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 5px
+}
+
+#nav{
+    line-height: 30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float: left;
+    padding: 5px;
+}
+
+#footer{
+    background-color: black;
+    color: white;
+    
+    clear: both;
+    text-align: center;
+    padding: 5px;
+}
+
+#section{
+    width: 350px;
+    float:left;
+    padding: 10px;
+}
+
+p{
+    color: white;
+    padding: 20px;
+    margin: 20px; 
+    background-color: grey;
+ }
+
+
+div.cities{
+    color: greenyellow;
+    padding: 20px;
+    background-color:mediumaquamarine;
+    margin: 20px
+}
 
 
 </style>
 </head>
     <body>
 
+<div id="header">
         <h1><a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank">GitHub Web development roadmap 2018</a></h1>
-        <ul>
-            <li> item 1</li>
-            <li> item 2 </li>
-            <li> item 3</li>
-        </ul>
+    </div>
+      
 
-<p>
+ <div id="nav">
+            London<br>
+            Paris<br>
+            Tokyo<br>
+            </div>
+   
+
+ <div id="section">
+ <p>
+<a href="https://www.cnblogs.com/acorn/p/5249089.html">CSS浮动(float,clear)通俗讲解</a>
+ </p>
+
+    
+
+<div class="cities">
+    <p>
 1. Learn Algorithms and Data Structures,
 </p>
+</div>    
+
+
 <p>
 2. Learn HTML then CSS and then JS,
 </p>
@@ -48,6 +107,10 @@ p{color: brown}
 <p>
 10. GOTO step 1 and repeat.
 </p>
-</prev>
+</div>
+<div id="footer">
+        Copyright W3School.com.cn
+        </div>
+
     </body>
 </html>
