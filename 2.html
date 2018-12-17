@@ -3,28 +3,39 @@
     <meta http-equiv="Content-Type" content="text/html"; charset="gb2312"/>
 
     <style type="text/css">
-        header{
-            background-color: aqua;
+
+     header{
+            background-color: aqua !important; /* 优先级最大 */;
             text-align: center;
             padding: 20px;
             margin: 20px;
         }
-        
+
+        #idhead{
+            background-color: yellow;
+        }
+        .classhead{
+            background-color: palevioletred;
+        }
+
         nav{
-            background-color:gray;
-            text-align: left;
+            background:gray;       
+            text-align: justify;
             padding: 20px;
             float: left;
             border: 1px solid black;
             margin: 20px;
+           
         }
         section{
             border: 1px solid black;
+            border-radius:25px;
             margin: 20px;
             padding: 20px;
             float: left;
             height: 300px;
             width: 300px;
+            display:block;
         }
         
         footer{
@@ -46,9 +57,10 @@
 
 <body>
 
-    <header>
+    <header id="idhead" class="classhead" style="background-color:red">
         <h1>This is header</h1>
-        <h2>This is header</h2>
+        <h2>the priority of css: !important > inline > id > class > element</h2>
+
     </header>
 
     <aside>
@@ -56,7 +68,7 @@
     </aside>
     <nav>
         <p>menu 1</p>
-        <p>menu 2</p>
+        <p>menu 2324353</p>
     </nav>
 
     <section>
@@ -70,11 +82,33 @@
 
     <section>
         <p>this is another section</p>       
+        <p id="result"></p>
     </section>
 
     <footer id="footer">
         <p>this is footer</p>       
     </footer>
+
+   
+<script>
+if(typeof(Storage)!=="undefined")
+{
+    if (localStorage.number1)
+    {
+        localStorage.sitename="local storage";
+        localStorage.number1 = Number(localStorage.number1) + 1;
+        document.getElementById("result").innerText="you have refreshed " + localStorage.number1 + " times";
+    }
+    else{
+        localStorage.number1 = 1;
+    }
+ 
+}
+else
+{
+  document.getElementById("result").innerHTML="sorry";
+}
+</script>
 
 </body>
 </html>
