@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <meta charset="utf8"/>
+<head>
+
+    <style type="text/css">
+
+#img{
+    height: 100px;
+        width: 100px;
+        background: yellowgreen;
+}
+.father{
+    border: 2px solid deeppink;
+    width: 200px;
+}
+.son {
+    float: left;
+    font-size: 0;
+    border: 2px solid blue;
+    padding: 5px;
+    margin: 10px;
+    
+}
+.father img {
+    width: 128px;
+}
+
+.clearfix:after 
+{ 
+ 
+visibility:visible; 
+display: block; 
+font-size: 1; 
+content: "clearfix content"; 
+clear: both; 
+height: 0; 
+} 
+    </style>
+    </head>
+
+    <body>
+
+            <div class="father clearfix">
+                <p> clearfix only used in parent element?</p>
+                    <div class="son">
+                            <img src="chen.png"> 
+                     </div>
+                     <div class="son">
+                            <img src="chen.png"> 
+                     </div>
+                     <div class="son">
+                            <img src="chen.png"> 
+                     </div>
+
+                     <div  style="width:50px; height:50px; background:yellow; float: left;">
+                          
+                     </div>
+            </div>
+               
+
+
+                  
+              
+        
+    </body>
+</html>
